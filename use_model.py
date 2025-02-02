@@ -17,7 +17,7 @@ image_path = "image_path" #add image path
 processed_img = preprocess_image(image_path)
 prediction = model.predict(processed_img)
 
-if prediction[0] > 0.4:
+if prediction[0] > 0.5:
     print(f"Predicted Class: Normal with confidence {prediction[0][0] * 100:.2f}%")
 else:
     print(f"Predicted Class: Pneumoniac with confidence {(1 - prediction[0][0]) * 100:.2f}%")
